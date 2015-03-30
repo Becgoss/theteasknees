@@ -1,0 +1,486 @@
+/* 
+Project Name: The Tea's Knees
+Author: Rebecca Goss
+*/
+
+
+/******************************************
+/* SETUP                   
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right; 
+	
+}
+
+.alignleft {
+	float: left; 
+	padding: 0 10px 10px 0;  note the padding around a left floated image 
+}
+
+.menu-line-1 {
+    margin: 0 auto;
+}
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+
+html {
+     -webkit-font-smoothing: antialiased;
+}
+
+body {
+     max-width: 1800px;
+     color: #5F6062;
+     font-size: 14px;
+     line-height: 1.6;
+     font-family: "skolar",serif;
+     margin-left: 1.5em;
+     margin-right: 1.5em;
+}
+
+h2 {
+     font-family: "ff-meta-web-pro",sans-serif;
+     color: #2d7883;
+     letter-spacing: 0.1em;
+     text-transform: uppercase;
+     font-size: 2em;
+     font-weight: 400; 
+     text-align: center;
+     padding-bottom: 0.25em;
+     padding-top: 1.25em;  
+
+}
+
+h3 {
+     color: #E8A613;
+    font-family: "kremlin-pro-web",serif;
+     font-weight: 400;
+     text-align: center;
+    letter-spacing: 0.1em;
+     font-size: 2em;
+}
+
+#hamburger {
+    line-height: 1;
+    margin: 20px 0 0 0;
+    padding-left: 1em;
+    color: yellow;
+    display: none;
+    font-size: 2em;
+}
+
+.smallerh2 {
+     font-size: 1.5em;
+     text-transform: none;
+}
+
+p { 
+     width: 50%;
+     margin: 0 auto;
+     font-size: 1.5em;
+     margin-bottom: 1em;
+     text-indent: 0.75em;
+
+}
+
+/******************************************
+/* LAYOUT                   
+/*******************************************/
+
+
+header {
+    font-family: "ff-meta-web-pro",sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+/*     font-family: 'Oswald', sans-serif;*/
+/*     font-family: 'Droid Serif', serif;*/
+     text-transform: uppercase;
+
+}
+.top {
+/*     background-color: #CED4C6;*/
+     padding-top: 10px;
+     padding-bottom: 10px;
+}
+.logo {
+     display: block;
+     width: 120px;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+nav div ul li {
+     display: inline-block;
+     list-style-type: none;
+}
+
+.menu-wrapper {
+    background-color: white;
+    width: 100%;
+    position:fixed;
+    top: 0px;
+    left: 0;
+    list-style-type: none;
+    display: none;
+}
+
+#menubar {
+     width: 100%;
+     text-align: center;
+     margin-left: auto;
+     margin-right: auto;
+     padding: 0;
+
+}
+
+
+.menu {
+     text-decoration: none;
+     font-size: 1.2em;
+     color: black;
+     padding: 0 10px;
+     margin: 0 10px;
+     letter-spacing: 0.1em;
+
+}
+.menu:hover{
+     color: #2d7883;
+} 
+
+#diamond::before{ 
+    content: '';
+    display: inline-block;
+    position: relative; 
+    height: 6px; 
+    width: 6px; 
+    background-color: #C9DCB3;
+    margin-bottom: 6px;
+    -webkit-transform: rotate(45deg); 
+    transform: rotate(45deg); 
+}
+
+.image{
+     height: 600px;
+}
+
+.active {
+    padding-bottom: 3px;
+/*    border-bottom: 2px solid #2d7883;*/
+    border-bottom: 2px solid #C9DCB3;
+}
+
+.social {
+     width: 30px;
+}
+
+main ul {
+     list-style-type: none;
+     text-align: center;
+     width: 30%;
+     margin-left: auto;
+     margin-right: auto;
+     padding-top: 2em;
+}
+
+main ul li {
+    display: inline-block;
+    padding: 2.5em;
+}
+
+.menu-section-wrapper {
+    display: inline-block;
+    width: 45%;
+    margin-top: 20px;
+}
+
+.menu-section-wrapper p {
+    width: 100%;
+}
+
+.scone {
+    padding-bottom: 33px;
+}
+
+.sandwich {
+    padding-bottom: 172px;
+}
+
+/*//Images */
+
+
+.aboutus-image {
+    background: 
+    url("../images/Market-1.jpg") 100% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.logo {
+    background: url("../images/teas-logo.png") no-repeat center center;
+    width: 20%;
+    height: 0;
+    padding-bottom: 20%;
+    margin-top: 130px;
+    margin-left: 40%;
+    margin-right: 40%;
+    float: left; 
+    background-size: cover;
+}
+
+.gallery-image {
+     background-image: url("../images/NM-Wedding-Cake.jpg");
+     background-attachment: fixed;
+     background-size: cover;
+     width: 100%;
+}
+
+.menu-image {
+     background-image: url("../images/afternoon-1.jpg");
+     background-attachment: fixed;
+     background-size: cover;
+     width: 100%;
+} 
+
+.crockery-image {
+     background-image: url("../images/china-1.jpg");
+     background-attachment: fixed;
+     background-size: cover;
+     width: 100%;
+} 
+
+.contact-image {
+     background-image: url("../images/nat-bec.jpg");
+     background-attachment: fixed;
+     background-size: cover;
+     width: 100%;
+}
+
+/*INSTAFEED IMAGES*/
+
+#instafeed {
+    margin: 0 auto;
+    width: 1210px;
+    }
+
+
+/*SECTIONS */
+
+.sectionheight {
+     height: 700px;
+}
+
+.menu-section{
+    height: 1400px;
+}
+.menulist {
+    width: 100%;
+    margin: 0 auto;
+    list-style-type: none;
+    font-size: 1.2em;
+}
+
+
+.contact {
+    background-color: #2D7883;
+}
+
+.contact h2 {
+    color: white;
+}
+
+input {
+    display: block;
+    width: 50%;
+    height: 30px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+textarea {
+    display: block;
+    width: 50%;
+    height: 150px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: lightgrey;
+}
+
+.message {
+    height: 70px;
+}
+footer {
+
+}
+
+figure {
+    display: inline-block;
+    padding: 5px;
+}
+
+figure a img {
+    height: 230px;
+}
+
+.short-version {
+    display: none;
+}
+
+/******************************************
+/* RESPONSIVE STYLES                   
+/*******************************************/
+
+
+@media (max-width: 1280px){
+    .image{
+     height: 500px;
+}
+    .sectionheight {
+     height: 650px;
+}
+    p { 
+     width: 70%;
+     margin: 0 auto;
+     font-size: 1.25em;
+     margin-bottom: 1em;
+     text-indent: 0.75em;
+
+}
+    #instafeed {
+     margin: 0 auto;
+     width: 1243px;
+    }
+
+h2 {
+     font-size: 1.75em;
+     font-weight: 400; 
+     padding-bottom: 0.25em;
+     padding-top: 1.25em;  
+
+}
+
+h3 {
+    font-size: 1.75em;
+}
+
+.smallerh2 {
+    font-size: 1.25em;
+}
+
+    #instafeed {
+    width: 1000px;
+    }
+
+main ul {
+
+    width: 50%;
+}
+
+
+}   
+
+
+@media (max-width: 1090px){
+
+    figure a img {
+    height: 182px;
+}
+
+    #instafeed {
+    width: 800px;
+}
+    p { 
+    width: 80%;
+}
+
+    .image{
+     height: 425px;
+}
+
+    .logo {
+    margin-top: 110px;
+}
+
+    .menu-section-wrapper {
+    display: inline;
+    width: 80%;
+    float: none;
+    margin: 0 auto;
+}
+
+    .menu-section-wrapper p {
+    margin: 0 auto;     
+        
+}
+    .short-version {
+    display: inline;
+}
+
+    .hide-me {
+    display: none;
+    }
+
+    .menu-section {
+    height: 1100px;
+}
+
+    .gallery-section {
+    height: 1200px;    
+
+    }
+
+    .smallerh2 {
+    padding-top: 0.5em;
+    margin: 0.4em 0;  
+}
+
+}
+
+@media (max-width: 880px) {
+
+    .image{
+     height: 375px;
+}
+}
+
+@media (max-width: 390px) {
+    
+    .menu {
+    font-size: 1em;
+    padding: 0 7px;
+    margin: 0 7px;
+    }
+
+    #diamond::before{ 
+    height: 5px; 
+    width: 5px; 
+    margin-bottom: 4.5px;
+
+}
+
+}
