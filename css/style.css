@@ -188,8 +188,8 @@ nav div ul li {
 
 .active {
     padding-bottom: 3px;
-/*    border-bottom: 2px solid #2d7883;*/
-    border-bottom: 2px solid #C9DCB3;
+    border-bottom: 0.175em solid #2d7883;
+/*    border-bottom: 2px solid #C9DCB3;*/
 }
 
 .social {
@@ -319,6 +319,16 @@ input {
     margin: 0 auto;
     margin-bottom: 10px;
     border-radius: 5px;
+}
+
+.send-button {
+    background-color: #E8A613;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 20%;
+    font-family: "ff-meta-web-pro",sans-serif;
+    text-transform: uppercase;
+    color: #2D7883;
 }
 
 textarea {
